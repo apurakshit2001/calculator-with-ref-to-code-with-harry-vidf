@@ -1,3 +1,12 @@
+function offSwitch() {
+    document.querySelector(".mbdy").classList.add("hidden");
+}
+
+function onSwitch() {
+    document.querySelector(".mbdy").classList.remove("hidden");
+}
+
+
 let string = "";
 let buttons = document.querySelectorAll('.button');
 
@@ -40,9 +49,9 @@ Array.from(buttons).forEach((button) => {
             let array = ab.split(operatorsRegex);
 
             let positionValue = array[array.length - 1]
-    
+
             let string1 = (FirstInput * parseInt(positionValue)) / 100;
-        
+
 
             console.log(string, document.querySelector('input').value.replace(positionValue, string1));
 
